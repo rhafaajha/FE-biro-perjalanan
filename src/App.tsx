@@ -1,5 +1,4 @@
 import React from 'react';
-import lLogo from '../public/plane-trip-1.svg';
 import './style/global.css';
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img
-          src={logo}
+          src={'../public/plane-trip-1.svg'}
           className="App-logo"
           alt="logo"
         />

@@ -1,19 +1,19 @@
 import React from 'react';
-import { useRoutes } from 'react-router-dom';
-import Link from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from './Button';
 import '../style/global.css';
 
 export default function Navbar() {
-  // const route = useRoutes
+  // const route = useLocation()
   // console.log(route, 'route')
-  // const isAdminRoute = route.pathname.includes("admin") || route.pathname.includes("login") || route.pathname.includes("register");
-  // const isLoginRoute = route.pathname === "/login/admin" || route.pathname === "/login"
+  // const isLoginRoute = route.pathname === "/login" || route.pathname === "/register"
 
-  // const Logout = async () => {
-  //   localStorage.removeItem('token');
-  //   route.push('/');
-  // };
+  const navigate = useNavigate()
+  const Logout = async () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
 
   return (
     <div>
@@ -37,7 +37,7 @@ export default function Navbar() {
             </div>
             <div className='account'>
               <a href={'/register'}>Buat Akun</a>
-              <Button title="Login" disabled={false}></Button>
+              <Link to="/login"><Button title="Login" disabled={false}></Button></Link>
             </div>
           </nav>
         </header>

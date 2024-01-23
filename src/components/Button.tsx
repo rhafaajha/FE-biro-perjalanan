@@ -8,5 +8,12 @@ interface MyButtonProps {
 }
 
 export default function Button({ title, disabled }: MyButtonProps) {
-  return <button className='button' disabled={disabled}>{title}</button>;
+  return (
+    <button
+      className="button"
+      disabled={disabled}
+    >
+      {title}
+    </button>
+  );
 }

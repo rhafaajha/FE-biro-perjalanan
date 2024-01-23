@@ -23,14 +23,14 @@ const validationSchema: Yup.Schema<FormValues> = Yup.object().shape({
 
 // Define the RegisterPelapor component
 const RegisterPelapor: React.FC = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   // Handle form submission
   const handleSubmit = async (values: FormValues) => {
     try {
     //   const res = await api.Register(values);
       toast.success('Sukses Create Akun');
-      history('/login');
+      navigate('/login');
     } catch (error) {
       console.log(error);
     }

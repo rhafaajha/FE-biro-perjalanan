@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './plane-trip-1.svg';
+import lLogo from '../public/plane-trip-1.svg';
 import './style/global.css';
 
 function App() {

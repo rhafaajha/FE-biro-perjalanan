@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
+import Link from 'react-router-dom';
 import Button from './Button';
 import '../style/global.css';
 
@@ -35,7 +36,7 @@ export default function Navbar() {
               <a href={'/data-turis'}>Data Turis</a>  
             </div>
             <div className='account'>
-              <a href={'/create-account'}>Buat Akun</a>
+              <a href={'/register'}>Buat Akun</a>
               <Button title="Login" disabled={false}></Button>
             </div>
           </nav>
